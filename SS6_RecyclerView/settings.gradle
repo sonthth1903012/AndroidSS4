@@ -1,2 +1,2 @@
-rootProject.name = "SS6_RecyclerView"
+rootProject.name = "SS7_Networking_RecycledView"
 include ':app'

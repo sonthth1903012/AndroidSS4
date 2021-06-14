@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+            <TextView
+                android:id="@+id/tvEpochDate"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="day 06"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:layout_margin="5sp" />
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:src="@drawable/w1"
+                android:layout_width="110sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:layout_margin="5sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvEpochDate" />
+
+            <TextView
+                android:id="@+id/tvIconPhrase"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:text="15 °C"
+                android:textSize="13sp"
+                android:textColor="#fff"
+                android:layout_margin="5sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivIcon" />
+            </RelativeLayout>
+
+
+</LinearLayout>

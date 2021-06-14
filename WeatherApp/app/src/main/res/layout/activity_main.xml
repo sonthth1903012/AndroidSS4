@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/hinhnen"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:gravity="center"
+        android:layout_marginTop="10sp"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/ivBk"
+        android:layout_width="300sp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/tvEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="end date"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fff"
+        android:layout_marginTop="50dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcList12H"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fff" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcListWeather"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fff" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvDayDt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:gravity="center"
+        android:layout_marginTop="40sp"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/ivBk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/w1"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/tvTMDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="end date"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <TableRow>
+            <TextView
+                android:text="Day:"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:gravity="left" android:layout_column="1"/>
+            <TextView
+                android:id="@+id/tvDay"
+                android:text="TableLayout Example"
+                android:gravity="left" android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Weather Day:"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:gravity="left" android:layout_column="1"/>
+            <TextView
+                android:id="@+id/tvDayWT"
+                android:text="TableLayout Example"
+                android:gravity="left" android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Weather Night:"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:gravity="left" android:layout_column="1"/>
+            <TextView
+                android:id="@+id/tvNightWT"
+                android:text="TableLayout Example"
+                android:gravity="left" android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Min:"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:gravity="left" android:layout_column="1"/>
+            <TextView
+                android:id="@+id/tvMin"
+                android:text="TableLayout Example"
+                android:gravity="left" android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Max:"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:gravity="left" android:layout_column="1"/>
+            <TextView
+                android:id="@+id/tvMax"
+                android:text="TableLayout Example"
+                android:gravity="left" android:layout_column="2"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

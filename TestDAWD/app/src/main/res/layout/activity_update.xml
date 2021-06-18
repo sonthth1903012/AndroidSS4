@@ -14,18 +14,24 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="Enter Name"
         android:id="@+id/edName"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Gender"
+        android:hint="Enter Gender"
         android:id="@+id/edGender"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
+        android:hint="Enter Description"
         android:1d="@+id/edDes"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Salary"
+        android:1d="@+id/edSalary"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

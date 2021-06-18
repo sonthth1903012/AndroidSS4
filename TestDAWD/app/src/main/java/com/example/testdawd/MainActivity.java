@@ -1,4 +1,4 @@
-package com.example.ss9sqllite_2;
+package com.example.testdawd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText edName;
     private EditText edDes;
+    private EditText edSalary;
     private Button btRegister;
     private Spinner spinner;
     private DBHelper db;
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         edName = (EditText) findViewById(R.id.edUser);
         edDes = (EditText) findViewById(R.id.edDes);
+        edSalary = (EditText) findViewById(R.id.edSalary);
         btRegister = (Button) findViewById(R.id.btRegister);
-        checkBox = (CheckBox) findViewById(R.id.ck);
         btRegister.setOnClickListener(this);
 
         String[] genders = {"Male", "Female", "Unknown"};
@@ -78,13 +79,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        if (!checkBox.isChecked()) {
-            Toast.makeText(this, "Please agree rules", Toast.LENGTH_LONG).show();
+        if (edDes.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please enter description", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (edSalary.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please enter salary", Toast.LENGTH_LONG).show();
             return;
         }
 
         String isAdd = db.addUser(edName.getText().toString(), spinner.getSelectedItem().toString(),
-                edDes.getText().toString());
+                edDes.getText().toString(), edSalary.getText().toString());
         Toast.makeText(this, isAdd, Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(MainActivity.this, ListUserAct.class);
@@ -92,11 +98,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 }
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-package com.example.ss9sqllite_2;
+package com.example.testdawd;
 
 import android.content.Intent;
 import android.database.Cursor;

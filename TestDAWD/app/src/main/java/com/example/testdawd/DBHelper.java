@@ -1,4 +1,4 @@
-package com.example.ss9sqllite_2;
+package com.example.testdawd;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -22,6 +22,10 @@ public class DBHelper extends SQLiteOpenHelper {
     public static String DES = "des";
 
 
+    public static String SALARY = "gender";
+
+
+
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -38,7 +42,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 ID + " INTEGER PRIMARY KEY, " +
                 NAME + " TEXT, " +
                 GENDER + " TEXT, " +
+                SALARY + " TEXT, " +
                 DES + " TEXT)";
+
         db.execSQL(sql);
 
     }
@@ -51,12 +57,13 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public String addUser(String user, String gender, String des) {
+    public String addUser(String user, String gender, String des, String salary) {
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(NAME, user);
         contentValues.put(GENDER, gender);
         contentValues.put(DES, des);
+        contentValues.put(SALARY, salary);
         long isAdd = db.insert(TABLE_NAME, null, contentValues);
         if (isAdd == -1) {
             return "Add Fail";
@@ -65,12 +72,13 @@ public class DBHelper extends SQLiteOpenHelper {
         return "Add success";
     }
 
-    public String updateUser(int id, String user, String gender, String des) {
+    public String updateUser(int id, String user, String gender, String des, String salary) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(NAME, user);
         contentValues.put(GENDER, gender);
         contentValues.put(DES, des);
+        contentValues.put(SALARY, salary);
         int isUpdate = db.update(TABLE_NAME, contentValues, ID + " = ? ", new String[]{id + ""});
         if (isUpdate > 0) {
             return "Update success";

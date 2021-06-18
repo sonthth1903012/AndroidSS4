@@ -37,6 +37,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //name TEXT,
         //gender TEXT,
         //des TEXT )
+        //salary TEXT
 
         String sql = "CREATE TABLE " + TABLE_NAME + " ( " +
                 ID + " INTEGER PRIMARY KEY, " +

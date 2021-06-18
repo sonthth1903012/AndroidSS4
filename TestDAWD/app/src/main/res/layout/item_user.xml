@@ -27,4 +27,11 @@
         android:text="Male"
         android:layout_weight="20"/>
 
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSalary"
+            android:text="1000$"
+            android:layout_weight="20"/>
+
 </LinearLayout>
